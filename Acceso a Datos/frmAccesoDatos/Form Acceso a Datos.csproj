@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmListaApellido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaApellido.Designer.cs">
+      <DependentUpon>frmListaApellido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaCompleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaCompleta.Designer.cs">
+      <DependentUpon>frmListaCompleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaMayores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaMayores.Designer.cs">
+      <DependentUpon>frmListaMayores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +71,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmListaApellido.resx">
+      <DependentUpon>frmListaApellido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaCompleta.resx">
+      <DependentUpon>frmListaCompleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaMayores.resx">
+      <DependentUpon>frmListaMayores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +104,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{b419fde3-81c6-45d5-81b0-0b21ba0882a1}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{d48c1bad-c5a0-4a9f-a2fb-f483fdbd36a4}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{797b0380-c896-453c-a677-7653e74ae950}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,7 @@ namespace Entidades
         private string _nombre;
         private string _apellido;
         private string _direccion;
+        private DateTime _fechaNacimiento;
 
         [DataMember]
         public string Nombre
@@ -48,6 +49,18 @@ namespace Entidades
             get
             {
                 return this._direccion;
+            }
+        }
+        [DataMember]
+        public DateTime FechaNacimiento
+        {
+            set
+            {
+                this._fechaNacimiento = value;
+            }
+            get
+            {
+                return this._fechaNacimiento;
             }
         }
         public override string ToString()

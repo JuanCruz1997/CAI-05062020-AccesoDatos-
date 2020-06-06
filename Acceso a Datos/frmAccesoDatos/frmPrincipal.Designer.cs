@@ -28,13 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnListaCompleta = new System.Windows.Forms.Button();
+            this.btnListaMayores = new System.Windows.Forms.Button();
+            this.btnListaApellido = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnListaCompleta
+            // 
+            this.btnListaCompleta.Location = new System.Drawing.Point(12, 70);
+            this.btnListaCompleta.Name = "btnListaCompleta";
+            this.btnListaCompleta.Size = new System.Drawing.Size(285, 68);
+            this.btnListaCompleta.TabIndex = 0;
+            this.btnListaCompleta.Text = "Lista Completa";
+            this.btnListaCompleta.UseVisualStyleBackColor = true;
+            this.btnListaCompleta.Click += new System.EventHandler(this.btnListaCompleta_Click);
+            // 
+            // btnListaMayores
+            // 
+            this.btnListaMayores.Location = new System.Drawing.Point(12, 171);
+            this.btnListaMayores.Name = "btnListaMayores";
+            this.btnListaMayores.Size = new System.Drawing.Size(285, 68);
+            this.btnListaMayores.TabIndex = 1;
+            this.btnListaMayores.Text = "Lista con mayores de 25 años";
+            this.btnListaMayores.UseVisualStyleBackColor = true;
+            this.btnListaMayores.Click += new System.EventHandler(this.btnListaMayores_Click);
+            // 
+            // btnListaApellido
+            // 
+            this.btnListaApellido.Location = new System.Drawing.Point(12, 272);
+            this.btnListaApellido.Name = "btnListaApellido";
+            this.btnListaApellido.Size = new System.Drawing.Size(285, 68);
+            this.btnListaApellido.TabIndex = 2;
+            this.btnListaApellido.Text = "Lista por Apellido";
+            this.btnListaApellido.UseVisualStyleBackColor = true;
+            this.btnListaApellido.Click += new System.EventHandler(this.btnListaApellido_Click);
+            // 
+            // frmPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(309, 450);
+            this.Controls.Add(this.btnListaApellido);
+            this.Controls.Add(this.btnListaMayores);
+            this.Controls.Add(this.btnListaCompleta);
+            this.Name = "frmPrincipal";
+            this.Text = "Opciones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnListaCompleta;
+        private System.Windows.Forms.Button btnListaMayores;
+        private System.Windows.Forms.Button btnListaApellido;
     }
 }
 
