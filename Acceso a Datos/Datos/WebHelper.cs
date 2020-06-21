@@ -23,8 +23,8 @@ namespace Datos
         }
         public static string Get(string url)
         {
-            var urlCompleta = rutaBase + url;
-            var responseString = client.DownloadString(urlCompleta);
+            string urlCompleta = rutaBase + url;
+            string responseString = client.DownloadString(urlCompleta);
             return responseString;
         }
         public static string Post(string url, NameValueCollection parametros)
