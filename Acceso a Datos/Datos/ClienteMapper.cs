@@ -20,7 +20,7 @@ namespace Datos
         }
         private List<Cliente> MapList(string json)
         {
-            var lst = JsonConvert.DeserializeObject<List<Cliente>>(json);
+            List<Cliente> lst = JsonConvert.DeserializeObject<List<Cliente>>(json);
             return lst;
         }
         public TransactionResult Insert(Cliente cliente)
@@ -38,7 +38,7 @@ namespace Datos
             n.Add("Direccion", cliente.Direccion);
             n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
             n.Add("Email", cliente.Email);
-            n.Add("Telefono", cliente.Telefono.ToString());
+            n.Add("Telefono", cliente.Telefono);
             n.Add("FechaNacimiento", cliente.FechaNacimiento.ToShortDateString());
             n.Add("Activo", cliente.Activo.ToString());
             return n;

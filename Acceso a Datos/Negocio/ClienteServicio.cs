@@ -47,7 +47,7 @@ namespace Negocio
             }
             return clienteApellido;
         }
-        public int InsertarCliente(string nombre,string apellido,string direccion,string email,int telefono,DateTime fechaNacimiento)
+        public int InsertarCliente(string nombre,string apellido,string direccion,string email,string telefono,DateTime fechaNacimiento)
         {
             Cliente cliente = new Cliente();
             cliente.Apellido = apellido;
@@ -66,6 +66,18 @@ namespace Negocio
             {
                 throw new Exception("Hubo un error en la petición al servidor. Detalle: " + resultante.Error);
             }
+        }
+        internal bool Existe(int idCliente)
+        {
+            List<Cliente> lst = TraerClientes();
+            foreach(Cliente c in lst)
+            {
+                if (c.Id == c.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

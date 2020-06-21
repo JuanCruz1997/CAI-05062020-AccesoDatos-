@@ -62,7 +62,7 @@ namespace frmAccesoDatos
             {
                 if (ValidarCampos())
                 {
-                    _clienteServicio.InsertarCliente(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtMail.Text, Convert.ToInt32(txtTelefono.Text), dtpFechaNac.Value);
+                    _clienteServicio.InsertarCliente(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtMail.Text, txtTelefono.Text, dtpFechaNac.Value);
                     MessageBox.Show("Se ha añadido el cliente");
                 }
             }

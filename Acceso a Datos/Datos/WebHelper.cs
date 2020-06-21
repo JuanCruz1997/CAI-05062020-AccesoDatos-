@@ -17,7 +17,7 @@ namespace Datos
         {
             client = new WebClient();
             client.Encoding = Encoding.UTF8;
-            rutaBase = ConfigurationManager.AppSettings["URL-API"];
+            rutaBase = ConfigurationManager.AppSettings["URL_API"];
             client.Headers.Add("ContentType", "application/json");
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }

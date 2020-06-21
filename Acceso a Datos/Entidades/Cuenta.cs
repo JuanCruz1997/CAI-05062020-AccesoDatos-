@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 namespace Entidades
 {
     [DataContract]
-    public class Cliente
+    public class Cuenta
     {
         private int _id;
-        private string _nombre;
-        private string _apellido;
-        private string _direccion;
-        private DateTime _fechaNacimiento;
-        private string _email;
-        private string _telefono;
+        private int _nroCuenta;
+        private string _descripcion;
+        private float _saldo;
+        private DateTime _fechaApertura;
+        private DateTime _fechaModificacion;
         private bool _activo;
+        private int _idCliente;
 
         [DataMember]
         public int Id
@@ -31,75 +31,64 @@ namespace Entidades
                 return this._id;
             }
         }
-        public string Nombre
+        [DataMember]
+        public int NroCuenta
         {
             set
             {
-                this._nombre = value;
+                this._nroCuenta = value;
             }
             get
             {
-                return this._nombre;
+                return this._nroCuenta;
             }
         }
         [DataMember]
-        public string Apellido
+        public string Descripcion
         {
             set
             {
-                this._apellido = value;
+                this._descripcion = value;
             }
             get
             {
-                return this._apellido;
+                return this._descripcion;
             }
         }
         [DataMember]
-        public string Direccion
+        public float Saldo
         {
             set
             {
-                this._direccion = value;
+                this._saldo = value;
             }
             get
             {
-                return this._direccion;
+                return this._saldo;
             }
         }
         [DataMember]
-        public DateTime FechaNacimiento
+        public DateTime FechaApertura
         {
             set
             {
-                this._fechaNacimiento = value;
+                this._fechaApertura = value;
             }
             get
             {
-                return this._fechaNacimiento;
+                return this._fechaApertura;
             }
         }
         [DataMember]
-        public string Email
+        public DateTime FechaModificacion
         {
             set
             {
-                this._email = value;
+                this._fechaModificacion = value;
             }
             get
             {
-                return this._email;
-            }
-        }
-        [DataMember]
-        public string Telefono
-        {
-            set
-            {
-                this._telefono = value;
-            }
-            get
-            {
-                return this._telefono;
+                return this._fechaModificacion;
             }
         }
         [DataMember]
@@ -114,9 +103,21 @@ namespace Entidades
                 return this._activo;
             }
         }
+        [DataMember]
+        public int idCliente
+        {
+            set
+            {
+                this._idCliente = value;
+            }
+            get
+            {
+                return this._idCliente;
+            }
+        }
         public override string ToString()
         {
-            return string.Format("Cliente {0}, {1}", this._apellido, this._nombre);
+            return string.Format("{3}) Cuenta nro {0} / {1} Saldo $ {2}", this.NroCuenta, this.Descripcion, this.Saldo.ToString("0.00"), this._id);
         }
     }
 }
