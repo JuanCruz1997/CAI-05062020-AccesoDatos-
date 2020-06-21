@@ -14,6 +14,9 @@ namespace Entidades
         private string _apellido;
         private string _direccion;
         private DateTime _fechaNacimiento;
+        private string _email;
+        private int _telefono;
+        private bool _activo;
 
         [DataMember]
         public string Nombre
@@ -61,6 +64,42 @@ namespace Entidades
             get
             {
                 return this._fechaNacimiento;
+            }
+        }
+        [DataMember]
+        public string Email
+        {
+            set
+            {
+                this._email = value;
+            }
+            get
+            {
+                return this._email;
+            }
+        }
+        [DataMember]
+        public int Telefono
+        {
+            set
+            {
+                this._telefono = value;
+            }
+            get
+            {
+                return this._telefono;
+            }
+        }
+        [DataMember]
+        public Boolean Activo
+        {
+            set
+            {
+                this._activo = value;
+            }
+            get
+            {
+                return this._activo;
             }
         }
         public override string ToString()

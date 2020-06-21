@@ -31,6 +31,7 @@
             this.btnListaCompleta = new System.Windows.Forms.Button();
             this.btnListaMayores = new System.Windows.Forms.Button();
             this.btnListaApellido = new System.Windows.Forms.Button();
+            this.btnInsertarCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnListaCompleta
@@ -63,11 +64,22 @@
             this.btnListaApellido.UseVisualStyleBackColor = true;
             this.btnListaApellido.Click += new System.EventHandler(this.btnListaApellido_Click);
             // 
+            // btnInsertarCliente
+            // 
+            this.btnInsertarCliente.Location = new System.Drawing.Point(12, 370);
+            this.btnInsertarCliente.Name = "btnInsertarCliente";
+            this.btnInsertarCliente.Size = new System.Drawing.Size(285, 68);
+            this.btnInsertarCliente.TabIndex = 3;
+            this.btnInsertarCliente.Text = "Insertar Cliente";
+            this.btnInsertarCliente.UseVisualStyleBackColor = true;
+            this.btnInsertarCliente.Click += new System.EventHandler(this.btnInsertarCliente_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 450);
+            this.ClientSize = new System.Drawing.Size(309, 464);
+            this.Controls.Add(this.btnInsertarCliente);
             this.Controls.Add(this.btnListaApellido);
             this.Controls.Add(this.btnListaMayores);
             this.Controls.Add(this.btnListaCompleta);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.Button btnListaCompleta;
         private System.Windows.Forms.Button btnListaMayores;
         private System.Windows.Forms.Button btnListaApellido;
+        private System.Windows.Forms.Button btnInsertarCliente;
     }
 }
 

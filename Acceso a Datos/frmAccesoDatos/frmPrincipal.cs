@@ -59,5 +59,13 @@ namespace frmAccesoDatos
             f.Show();
             this.Hide();
         }
+
+        private void btnInsertarCliente_Click(object sender, EventArgs e)
+        {
+            frmIngresoCliente f = new frmIngresoCliente(this._clienteServicio, this);
+            f.Owner = this;
+            f.Show();
+            this.Hide();
+        }
     }
 }

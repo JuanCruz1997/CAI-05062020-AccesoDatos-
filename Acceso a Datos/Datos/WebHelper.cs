@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -16,7 +17,8 @@ namespace Datos
         {
             client = new WebClient();
             client.Encoding = Encoding.UTF8;
-            rutaBase = "https://cai-api.azurewebsites.net/";
+            rutaBase = ConfigurationManager.AppSettings["URL-API"];
+            client.Headers.Add("ContentType", "application/json");
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
         public static string Get(string url)
@@ -27,10 +29,18 @@ namespace Datos
         }
         public static string Post(string url, NameValueCollection parametros)
         {
-            var urlCompleta = rutaBase + url;
-            var response = client.UploadValues(urlCompleta, parametros);
-            var responseString = Encoding.Default.GetString(response);
-            return responseString;
+            string urlCompleta = rutaBase + url;
+            try
+            {
+                var response = client.UploadValues(urlCompleta, parametros);
+                var responseString = Encoding.Default.GetString(response);
+                return responseString;
+            }
+            catch(Exception ex)
+            {
+                return "{ \"isOk\":false,\"id\":-1,\"error\":\"Error en el llamado al servicio\"}";
+            }
+            
         }
     }
 }

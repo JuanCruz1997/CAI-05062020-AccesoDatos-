@@ -47,5 +47,25 @@ namespace Negocio
             }
             return clienteApellido;
         }
+        public int InsertarCliente(string nombre,string apellido,string direccion,string email,int telefono,DateTime fechaNacimiento)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Apellido = apellido;
+            cliente.Nombre = nombre;
+            cliente.Direccion = direccion;
+            cliente.Email = email;
+            cliente.Telefono = telefono;
+            cliente.FechaNacimiento = fechaNacimiento;
+            cliente.Activo = true;
+            TransactionResult resultante = mapper.Insert(cliente);
+            if (resultante.IsOk)
+            {
+                return resultante.Id;
+            }
+            else
+            {
+                throw new Exception("Hubo un error en la petición al servidor. Detalle: " + resultante.Error);
+            }
+        }
     }
 }
