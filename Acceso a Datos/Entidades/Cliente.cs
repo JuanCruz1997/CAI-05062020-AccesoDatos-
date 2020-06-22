@@ -31,6 +31,7 @@ namespace Entidades
                 return this._id;
             }
         }
+        [DataMember]
         public string Nombre
         {
             set
