@@ -18,6 +18,12 @@ namespace Datos
             List<Cliente> resultado = MapList(json2);
             return resultado;
         }
+        public List<Cliente> TraerPropios()
+        {
+            string json2 = WebHelper.Get("/api/v1/cliente/885802");
+            List<Cliente> resultado = MapList(json2);
+            return resultado;
+        }
         private List<Cliente> MapList(string json)
         {
             List<Cliente> lst = JsonConvert.DeserializeObject<List<Cliente>>(json);

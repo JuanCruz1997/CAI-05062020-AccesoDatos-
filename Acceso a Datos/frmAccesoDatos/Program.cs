@@ -17,7 +17,7 @@ namespace frmAccesoDatos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal(new ClienteServicio()));
+            Application.Run(new frmPrincipal(new ClienteServicio(), new CuentaServicio()));
         }
     }
 }

@@ -32,11 +32,16 @@
             this.btnListaMayores = new System.Windows.Forms.Button();
             this.btnListaApellido = new System.Windows.Forms.Button();
             this.btnInsertarCliente = new System.Windows.Forms.Button();
+            this.gbClientes = new System.Windows.Forms.GroupBox();
+            this.gbCuentas = new System.Windows.Forms.GroupBox();
+            this.btnAltaCuentas = new System.Windows.Forms.Button();
+            this.gbClientes.SuspendLayout();
+            this.gbCuentas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnListaCompleta
             // 
-            this.btnListaCompleta.Location = new System.Drawing.Point(12, 70);
+            this.btnListaCompleta.Location = new System.Drawing.Point(28, 45);
             this.btnListaCompleta.Name = "btnListaCompleta";
             this.btnListaCompleta.Size = new System.Drawing.Size(285, 68);
             this.btnListaCompleta.TabIndex = 0;
@@ -46,7 +51,7 @@
             // 
             // btnListaMayores
             // 
-            this.btnListaMayores.Location = new System.Drawing.Point(12, 171);
+            this.btnListaMayores.Location = new System.Drawing.Point(28, 144);
             this.btnListaMayores.Name = "btnListaMayores";
             this.btnListaMayores.Size = new System.Drawing.Size(285, 68);
             this.btnListaMayores.TabIndex = 1;
@@ -56,7 +61,7 @@
             // 
             // btnListaApellido
             // 
-            this.btnListaApellido.Location = new System.Drawing.Point(12, 272);
+            this.btnListaApellido.Location = new System.Drawing.Point(28, 239);
             this.btnListaApellido.Name = "btnListaApellido";
             this.btnListaApellido.Size = new System.Drawing.Size(285, 68);
             this.btnListaApellido.TabIndex = 2;
@@ -66,7 +71,7 @@
             // 
             // btnInsertarCliente
             // 
-            this.btnInsertarCliente.Location = new System.Drawing.Point(12, 370);
+            this.btnInsertarCliente.Location = new System.Drawing.Point(28, 342);
             this.btnInsertarCliente.Name = "btnInsertarCliente";
             this.btnInsertarCliente.Size = new System.Drawing.Size(285, 68);
             this.btnInsertarCliente.TabIndex = 3;
@@ -74,19 +79,52 @@
             this.btnInsertarCliente.UseVisualStyleBackColor = true;
             this.btnInsertarCliente.Click += new System.EventHandler(this.btnInsertarCliente_Click);
             // 
+            // gbClientes
+            // 
+            this.gbClientes.Controls.Add(this.btnInsertarCliente);
+            this.gbClientes.Controls.Add(this.btnListaCompleta);
+            this.gbClientes.Controls.Add(this.btnListaApellido);
+            this.gbClientes.Controls.Add(this.btnListaMayores);
+            this.gbClientes.Location = new System.Drawing.Point(13, 13);
+            this.gbClientes.Name = "gbClientes";
+            this.gbClientes.Size = new System.Drawing.Size(360, 439);
+            this.gbClientes.TabIndex = 4;
+            this.gbClientes.TabStop = false;
+            this.gbClientes.Text = "Clientes";
+            // 
+            // gbCuentas
+            // 
+            this.gbCuentas.Controls.Add(this.btnAltaCuentas);
+            this.gbCuentas.Location = new System.Drawing.Point(408, 13);
+            this.gbCuentas.Name = "gbCuentas";
+            this.gbCuentas.Size = new System.Drawing.Size(318, 439);
+            this.gbCuentas.TabIndex = 5;
+            this.gbCuentas.TabStop = false;
+            this.gbCuentas.Text = "Cuentas";
+            // 
+            // btnAltaCuentas
+            // 
+            this.btnAltaCuentas.Location = new System.Drawing.Point(17, 45);
+            this.btnAltaCuentas.Name = "btnAltaCuentas";
+            this.btnAltaCuentas.Size = new System.Drawing.Size(285, 68);
+            this.btnAltaCuentas.TabIndex = 1;
+            this.btnAltaCuentas.Text = "Alta de cuentas";
+            this.btnAltaCuentas.UseVisualStyleBackColor = true;
+            this.btnAltaCuentas.Click += new System.EventHandler(this.btnAltaCuentas_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 464);
-            this.Controls.Add(this.btnInsertarCliente);
-            this.Controls.Add(this.btnListaApellido);
-            this.Controls.Add(this.btnListaMayores);
-            this.Controls.Add(this.btnListaCompleta);
+            this.ClientSize = new System.Drawing.Size(738, 464);
+            this.Controls.Add(this.gbCuentas);
+            this.Controls.Add(this.gbClientes);
             this.Name = "frmPrincipal";
             this.Text = "Opciones";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.gbClientes.ResumeLayout(false);
+            this.gbCuentas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -97,6 +135,9 @@
         private System.Windows.Forms.Button btnListaMayores;
         private System.Windows.Forms.Button btnListaApellido;
         private System.Windows.Forms.Button btnInsertarCliente;
+        private System.Windows.Forms.GroupBox gbClientes;
+        private System.Windows.Forms.GroupBox gbCuentas;
+        private System.Windows.Forms.Button btnAltaCuentas;
     }
 }
 

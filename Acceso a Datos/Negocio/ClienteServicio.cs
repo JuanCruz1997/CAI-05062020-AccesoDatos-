@@ -21,6 +21,11 @@ namespace Negocio
             List<Cliente> result = mapper.TraerTodos();
             return result;
         }
+        public List<Cliente> TraerClientesPropios()
+        {
+            List<Cliente> result = mapper.TraerPropios();
+            return result;
+        }
         public List<Cliente> TraerClientesMayoresA(int edad)
         {
             List<Cliente> clienteEdad = new List<Cliente>();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 using Negocio;
 
 namespace frmAccesoDatos
@@ -14,6 +15,7 @@ namespace frmAccesoDatos
     public partial class frmPrincipal : Form
     {
         private ClienteServicio _clienteServicio;
+        private CuentaServicio _cuentaServicio;
         public ClienteServicio ClienteServicio
         {
             get
@@ -21,9 +23,17 @@ namespace frmAccesoDatos
                 return this._clienteServicio;
             }
         }
-        public frmPrincipal(ClienteServicio cs)
+        public CuentaServicio CuentaServicio
+        {
+            get
+            {
+                return this._cuentaServicio;
+            }
+        }
+        public frmPrincipal(ClienteServicio cs, CuentaServicio cus)
         {
             this._clienteServicio = cs;
+            this._cuentaServicio = cus;
             InitializeComponent();
         }
 
@@ -63,6 +73,14 @@ namespace frmAccesoDatos
         private void btnInsertarCliente_Click(object sender, EventArgs e)
         {
             frmIngresoCliente f = new frmIngresoCliente(this._clienteServicio, this);
+            f.Owner = this;
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnAltaCuentas_Click(object sender, EventArgs e)
+        {
+            frmAltaCuenta f = new frmAltaCuenta(this._clienteServicio, this._cuentaServicio);
             f.Owner = this;
             f.Show();
             this.Hide();
