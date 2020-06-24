@@ -85,5 +85,21 @@ namespace frmAccesoDatos
             f.Show();
             this.Hide();
         }
+
+        private void btnModificarSaldo_Click(object sender, EventArgs e)
+        {
+            frmModificarSaldo f = new frmModificarSaldo(this._clienteServicio, this._cuentaServicio);
+            f.Owner = this;
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnCuentas_Click(object sender, EventArgs e)
+        {
+            frmVerCuentas f = new frmVerCuentas(this._clienteServicio, this._cuentaServicio);
+            f.Owner = this;
+            f.Show();
+            this.Hide();
+        }
     }
 }

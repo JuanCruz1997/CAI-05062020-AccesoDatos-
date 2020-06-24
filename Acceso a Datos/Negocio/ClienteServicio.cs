@@ -77,7 +77,7 @@ namespace Negocio
             List<Cliente> lst = TraerClientes();
             foreach(Cliente c in lst)
             {
-                if (c.Id == c.Id)
+                if (idCliente == c.Id)
                 {
                     return true;
                 }

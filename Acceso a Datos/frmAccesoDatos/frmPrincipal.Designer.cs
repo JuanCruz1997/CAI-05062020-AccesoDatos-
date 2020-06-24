@@ -34,6 +34,8 @@
             this.btnInsertarCliente = new System.Windows.Forms.Button();
             this.gbClientes = new System.Windows.Forms.GroupBox();
             this.gbCuentas = new System.Windows.Forms.GroupBox();
+            this.btnCuentas = new System.Windows.Forms.Button();
+            this.btnModificarSaldo = new System.Windows.Forms.Button();
             this.btnAltaCuentas = new System.Windows.Forms.Button();
             this.gbClientes.SuspendLayout();
             this.gbCuentas.SuspendLayout();
@@ -55,7 +57,7 @@
             this.btnListaMayores.Name = "btnListaMayores";
             this.btnListaMayores.Size = new System.Drawing.Size(285, 68);
             this.btnListaMayores.TabIndex = 1;
-            this.btnListaMayores.Text = "Lista con mayores de 25 años";
+            this.btnListaMayores.Text = "Lista con mayores de X años";
             this.btnListaMayores.UseVisualStyleBackColor = true;
             this.btnListaMayores.Click += new System.EventHandler(this.btnListaMayores_Click);
             // 
@@ -94,6 +96,8 @@
             // 
             // gbCuentas
             // 
+            this.gbCuentas.Controls.Add(this.btnCuentas);
+            this.gbCuentas.Controls.Add(this.btnModificarSaldo);
             this.gbCuentas.Controls.Add(this.btnAltaCuentas);
             this.gbCuentas.Location = new System.Drawing.Point(408, 13);
             this.gbCuentas.Name = "gbCuentas";
@@ -101,6 +105,26 @@
             this.gbCuentas.TabIndex = 5;
             this.gbCuentas.TabStop = false;
             this.gbCuentas.Text = "Cuentas";
+            // 
+            // btnCuentas
+            // 
+            this.btnCuentas.Location = new System.Drawing.Point(17, 239);
+            this.btnCuentas.Name = "btnCuentas";
+            this.btnCuentas.Size = new System.Drawing.Size(285, 68);
+            this.btnCuentas.TabIndex = 3;
+            this.btnCuentas.Text = "Ver todas las cuentas";
+            this.btnCuentas.UseVisualStyleBackColor = true;
+            this.btnCuentas.Click += new System.EventHandler(this.btnCuentas_Click);
+            // 
+            // btnModificarSaldo
+            // 
+            this.btnModificarSaldo.Location = new System.Drawing.Point(17, 144);
+            this.btnModificarSaldo.Name = "btnModificarSaldo";
+            this.btnModificarSaldo.Size = new System.Drawing.Size(285, 68);
+            this.btnModificarSaldo.TabIndex = 2;
+            this.btnModificarSaldo.Text = "Modificar saldo";
+            this.btnModificarSaldo.UseVisualStyleBackColor = true;
+            this.btnModificarSaldo.Click += new System.EventHandler(this.btnModificarSaldo_Click);
             // 
             // btnAltaCuentas
             // 
@@ -138,6 +162,8 @@
         private System.Windows.Forms.GroupBox gbClientes;
         private System.Windows.Forms.GroupBox gbCuentas;
         private System.Windows.Forms.Button btnAltaCuentas;
+        private System.Windows.Forms.Button btnModificarSaldo;
+        private System.Windows.Forms.Button btnCuentas;
     }
 }
 

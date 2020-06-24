@@ -91,7 +91,7 @@
             this.Controls.Add(this.btnVolverMayores);
             this.Controls.Add(this.lstMayores);
             this.Name = "frmListaMayores";
-            this.Text = "Lista de mayores de 25 años";
+            this.Text = "Lista de mayores de X años";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmListaMayores_FormClosed);
             this.Load += new System.EventHandler(this.frmListaMayores_Load);
             this.ResumeLayout(false);

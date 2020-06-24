@@ -75,11 +75,23 @@
     <Compile Include="frmListaMayores.Designer.cs">
       <DependentUpon>frmListaMayores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificarSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarSaldo.Designer.cs">
+      <DependentUpon>frmModificarSaldo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerCuentas.Designer.cs">
+      <DependentUpon>frmVerCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,8 +110,14 @@
     <EmbeddedResource Include="frmListaMayores.resx">
       <DependentUpon>frmListaMayores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarSaldo.resx">
+      <DependentUpon>frmModificarSaldo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerCuentas.resx">
+      <DependentUpon>frmVerCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
