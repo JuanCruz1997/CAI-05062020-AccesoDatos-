@@ -34,7 +34,7 @@ namespace frmAccesoDatos
         }
         private void frmVerCuentas_Load(object sender, EventArgs e)
         {
-            CargarListaCuentas(_clienteServicio.TraerClientes());
+            CargarListaCuentas(_clienteServicio.TraerClientesPropios());
         }
 
         private void btnVolverCuentas_Click(object sender, EventArgs e)
