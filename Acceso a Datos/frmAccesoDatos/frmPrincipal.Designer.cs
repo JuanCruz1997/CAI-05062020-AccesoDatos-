@@ -105,6 +105,7 @@
             this.gbCuentas.TabIndex = 5;
             this.gbCuentas.TabStop = false;
             this.gbCuentas.Text = "Cuentas";
+            this.gbCuentas.Enter += new System.EventHandler(this.gbCuentas_Enter);
             // 
             // btnCuentas
             // 

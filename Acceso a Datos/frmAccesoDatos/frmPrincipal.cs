@@ -101,5 +101,10 @@ namespace frmAccesoDatos
             f.Show();
             this.Hide();
         }
+
+        private void gbCuentas_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

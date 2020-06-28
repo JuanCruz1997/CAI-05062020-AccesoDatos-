@@ -27,7 +27,11 @@ namespace frmAccesoDatos
             List<Cuenta> cuentas = new List<Cuenta>();
             foreach(Cliente c in clientes)
             {
-                cuentas.Add(_cuentaServicio.Traer(c.Id));
+                Cuenta cuentaAAgregar = _cuentaServicio.Traer(c.Id);
+                if (cuentaAAgregar != null)
+                {
+                    cuentas.Add(cuentaAAgregar);
+                }
             }
             lstCuentas.DataSource = null;
             lstCuentas.DataSource = cuentas;

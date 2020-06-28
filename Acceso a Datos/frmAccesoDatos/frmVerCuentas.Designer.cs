@@ -38,7 +38,7 @@
             this.lstCuentas.ItemHeight = 16;
             this.lstCuentas.Location = new System.Drawing.Point(13, 13);
             this.lstCuentas.Name = "lstCuentas";
-            this.lstCuentas.Size = new System.Drawing.Size(390, 388);
+            this.lstCuentas.Size = new System.Drawing.Size(461, 388);
             this.lstCuentas.TabIndex = 0;
             // 
             // btnVolverCuentas
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 450);
+            this.ClientSize = new System.Drawing.Size(486, 450);
             this.Controls.Add(this.btnVolverCuentas);
             this.Controls.Add(this.lstCuentas);
             this.Name = "frmVerCuentas";
